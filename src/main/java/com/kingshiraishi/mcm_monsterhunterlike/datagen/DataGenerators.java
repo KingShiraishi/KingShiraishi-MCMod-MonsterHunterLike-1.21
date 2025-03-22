@@ -34,6 +34,9 @@ public class DataGenerators {
                 packOutput, existingFileHelper
         ));
 
+        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, completableFuture, existingFileHelper);
+        dataGenerator.addProvider(event.includeClient(), blockTagsProvider);
+
         dataGenerator.addProvider(event.includeClient(), new LootTableProvider(
                 packOutput,
                 Collections.emptySet(),
@@ -41,7 +44,7 @@ public class DataGenerators {
                 completableFuture
         ));
 
-        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, completableFuture, existingFileHelper);
-        dataGenerator.addProvider(event.includeClient(), blockTagsProvider);
+        dataGenerator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, completableFuture));
+
     }
 }
