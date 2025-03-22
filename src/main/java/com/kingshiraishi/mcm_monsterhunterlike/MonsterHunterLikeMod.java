@@ -1,5 +1,6 @@
 package com.kingshiraishi.mcm_monsterhunterlike;
 
+import com.kingshiraishi.mcm_monsterhunterlike.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -38,6 +39,8 @@ public class MonsterHunterLikeMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+
+        ModItems.register(modEventBus);
 
 
         // Register the item to a creative tab
