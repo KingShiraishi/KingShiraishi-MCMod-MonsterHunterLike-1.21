@@ -9,5 +9,8 @@
     "tooltip.kingshiraishi.item__blue_orb": "Shift down for more information.",
     "tooltip.kingshiraishi.item__blue_orb.shift_down": "The Blue Orb.",
 
+    "block.mcm_monsterhunterlike.block__red_orb_block": "Red Orb Block",
+    "block.mcm_monsterhunterlike.block__blue_orb_block": "Blue Orb Block",
+
     "creativetab.mcm_monsterhunterlike.tab_name": "kingshiraishi's Mod Tab Name."
 }

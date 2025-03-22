@@ -1,5 +1,6 @@
 package com.kingshiraishi.mcm_monsterhunterlike;
 
+import com.kingshiraishi.mcm_monsterhunterlike.block.ModBlocks;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModCreativeModeTabs;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -43,6 +44,7 @@ public class MonsterHunterLikeMod
 
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register the item to a creative tab

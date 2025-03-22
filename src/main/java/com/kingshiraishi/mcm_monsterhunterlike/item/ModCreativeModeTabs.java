@@ -1,6 +1,7 @@
 package com.kingshiraishi.mcm_monsterhunterlike.item;
 
 import com.kingshiraishi.mcm_monsterhunterlike.MonsterHunterLikeMod;
+import com.kingshiraishi.mcm_monsterhunterlike.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,6 +22,8 @@ public class ModCreativeModeTabs {
                             .displayItems((itemDisplayParameters, o) -> {
                                 o.accept(ModItems.ITEM__RED_ORB.get());
                                 o.accept(ModItems.ITEM__BLUE_ORB.get());
+                                o.accept(ModBlocks.BLOCK__RED_ORB_BLOCK.get());
+                                o.accept(ModBlocks.BLOCK__BLUE_ORB_BLOCK.get());
                             })
                             .build()
                     );
