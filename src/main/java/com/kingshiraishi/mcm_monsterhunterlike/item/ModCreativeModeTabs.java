@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                                 o.accept(ModItems.ITEM__BLUE_ORB.get());
                                 o.accept(ModBlocks.BLOCK__RED_ORB_BLOCK.get());
                                 o.accept(ModBlocks.BLOCK__BLUE_ORB_BLOCK.get());
+                                o.accept(ModBlocks.ENTITY_BLOCK__PEDESTAL.get());
                             })
                             .build()
                     );

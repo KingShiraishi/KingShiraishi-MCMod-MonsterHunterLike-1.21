@@ -1,9 +1,13 @@
 package com.kingshiraishi.mcm_monsterhunterlike.block;
 
 import com.kingshiraishi.mcm_monsterhunterlike.MonsterHunterLikeMod;
+import com.kingshiraishi.mcm_monsterhunterlike.block.custom.PedestalEntityBlock;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModItems;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -12,6 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -57,6 +62,18 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST)
             ));
+
+    public static final RegistryObject<Block> ENTITY_BLOCK__PEDESTAL = registerBlock(
+            "entity_block__pedestal", () -> new PedestalEntityBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack ps, Item.TooltipContext pc, List<Component> pTooltipComponents, TooltipFlag f) {
+                    pTooltipComponents.add(Component.translatable("tooltip.kingshiraishi.entity_block__pedestal"));
+                    super.appendHoverText(ps, pc, pTooltipComponents, f);
+                }
+            });
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> registryObject = MOD_BLOCKS.register(name, block);

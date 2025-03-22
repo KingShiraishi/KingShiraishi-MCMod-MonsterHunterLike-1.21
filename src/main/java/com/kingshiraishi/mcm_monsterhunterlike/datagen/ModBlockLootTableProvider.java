@@ -60,6 +60,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 8.0F
         ));
 
+        dropSelf(ModBlocks.ENTITY_BLOCK__PEDESTAL.get());
 
     }
 

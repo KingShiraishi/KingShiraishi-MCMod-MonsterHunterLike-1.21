@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mcm_monsterhunterlike:block/entity_block__pedestal"
+    }
+  }
+}

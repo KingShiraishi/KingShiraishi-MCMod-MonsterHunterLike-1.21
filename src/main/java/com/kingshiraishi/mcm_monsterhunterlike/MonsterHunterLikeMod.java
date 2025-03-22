@@ -1,11 +1,14 @@
 package com.kingshiraishi.mcm_monsterhunterlike;
 
 import com.kingshiraishi.mcm_monsterhunterlike.block.ModBlocks;
+import com.kingshiraishi.mcm_monsterhunterlike.block.entity.ModEntityBlockEntities;
+import com.kingshiraishi.mcm_monsterhunterlike.block.entity.renderer.PedestalEntityBlockEntityRenderer;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModCreativeModeTabs;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -45,6 +48,7 @@ public class MonsterHunterLikeMod
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntityBlockEntities.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -84,6 +88,11 @@ public class MonsterHunterLikeMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
+        }
+
+        @SubscribeEvent
+        public static void registerBlockEntityRenderer(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModEntityBlockEntities.PEDESTAL_BLOCKENTITY.get(), PedestalEntityBlockEntityRenderer::new);
         }
     }
 }

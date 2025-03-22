@@ -12,5 +12,8 @@
     "block.mcm_monsterhunterlike.block__red_orb_block": "Red Orb Block",
     "block.mcm_monsterhunterlike.block__blue_orb_block": "Blue Orb Block",
 
+    "block.mcm_monsterhunterlike.entity_block__pedestal": "Pedestal",
+    "tooltip.kingshiraishi.entity_block__pedestal": "Place the Orb on top of this.",
+
     "creativetab.mcm_monsterhunterlike.tab_name": "kingshiraishi's Mod Tab Name."
 }
