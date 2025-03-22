@@ -42,7 +42,12 @@ public class ModItems {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public static final RegistryObject<Item> ICON__KING_CROWN = MOD_ITEMS.register(
-            "icon__king_crown", () -> new Item(new Item.Properties()));
+            "icon__king_crown", () -> new Item(new Item.Properties()) {
+                @Override
+                public void appendHoverText(ItemStack ps, TooltipContext pc, List<Component> pTooltipComponents, TooltipFlag f) {
+                    pTooltipComponents.add(Component.translatable("tooltip.kingshiraishi.icon__king_crown"));
+                    super.appendHoverText(ps, pc, pTooltipComponents, f);
+                }});
 
     public static final RegistryObject<Item> ITEM__RED_ORB = MOD_ITEMS.register(
             "item__red_orb", () -> new Item(new Item.Properties()) {

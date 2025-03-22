@@ -1,6 +1,7 @@
 {
-    "item.mcm_monsterhunterlike.icon__king_crown": "How did you get this item?",
-    
+    "item.mcm_monsterhunterlike.icon__king_crown": "King Crown",
+    "tooltip.kingshiraishi.icon__king_crown": "How did you get this?",
+
     "item.mcm_monsterhunterlike.item__red_orb": "Red Orb",
     "tooltip.kingshiraishi.item__red_orb": "Shift down for more information.",
     "tooltip.kingshiraishi.item__red_orb.shift_down": "The Red Orb.",
