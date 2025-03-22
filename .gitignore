@@ -30,3 +30,5 @@ forge*changelog.txt
 *.ipr
 *.iws
 .idea_modules
+src/generated
+run-data

@@ -1,5 +1,12 @@
 {
-    "item.mcm_monsterhunterlike.item_name": "Item name description.",
+    "item.mcm_monsterhunterlike.icon__king_crown": "How did you get this item?",
+    
+    "item.mcm_monsterhunterlike.item__red_orb": "Red Orb",
+    "tooltip.kingshiraishi.item__red_orb": "Shift down for more information.",
+    "tooltip.kingshiraishi.item__red_orb.shift_down": "The Red Orb.",
+    "item.mcm_monsterhunterlike.item__blue_orb": "Blue Orb",
+    "tooltip.kingshiraishi.item__blue_orb": "Shift down for more information.",
+    "tooltip.kingshiraishi.item__blue_orb.shift_down": "The Blue Orb.",
 
     "creativetab.mcm_monsterhunterlike.tab_name": "kingshiraishi's Mod Tab Name."
 }

@@ -16,10 +16,11 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> TAB_NAME =
             CREATIVE_MODE_TAB_DEFERRED_REGISTER.register(
                     "tab_name", () -> CreativeModeTab.builder().icon(
-                            () -> new ItemStack(ModItems.ITEM_NAME.get()))
+                            () -> new ItemStack(ModItems.ICON__KING_CROWN.get()))
                             .title(Component.translatable("creativetab.mcm_monsterhunterlike.tab_name"))
                             .displayItems((itemDisplayParameters, o) -> {
-                                o.accept(ModItems.ITEM_NAME.get());
+                                o.accept(ModItems.ITEM__RED_ORB.get());
+                                o.accept(ModItems.ITEM__BLUE_ORB.get());
                             })
                             .build()
                     );
