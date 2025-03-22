@@ -1,5 +1,6 @@
 package com.kingshiraishi.mcm_monsterhunterlike;
 
+import com.kingshiraishi.mcm_monsterhunterlike.item.ModCreativeModeTabs;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
@@ -40,6 +41,7 @@ public class MonsterHunterLikeMod
         MinecraftForge.EVENT_BUS.register(this);
 
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
 
 
