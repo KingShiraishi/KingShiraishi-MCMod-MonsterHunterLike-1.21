@@ -16,5 +16,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ICON__KING_CROWN.get());
         basicItem(ModItems.ITEM__RED_ORB.get());
         basicItem(ModItems.ITEM__BLUE_ORB.get());
+
+        withExistingParent(ModItems.ITEM__SPAWN_EGG__FOURLEGS.getId().getPath(), "item/template_spawn_egg");
     }
 }

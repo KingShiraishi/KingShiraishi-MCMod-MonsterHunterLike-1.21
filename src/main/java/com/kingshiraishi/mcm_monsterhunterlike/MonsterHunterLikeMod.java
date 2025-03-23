@@ -3,9 +3,12 @@ package com.kingshiraishi.mcm_monsterhunterlike;
 import com.kingshiraishi.mcm_monsterhunterlike.block.ModBlocks;
 import com.kingshiraishi.mcm_monsterhunterlike.block.entity.ModEntityBlockEntities;
 import com.kingshiraishi.mcm_monsterhunterlike.block.entity.renderer.PedestalEntityBlockEntityRenderer;
+import com.kingshiraishi.mcm_monsterhunterlike.entity.ModEntities;
+import com.kingshiraishi.mcm_monsterhunterlike.entity.client.FourlegsRenderer;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModCreativeModeTabs;
 import com.kingshiraishi.mcm_monsterhunterlike.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -21,6 +24,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegisterEvent;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -44,7 +48,10 @@ public class MonsterHunterLikeMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        // Add Entities
+        ModEntities.register(modEventBus);
 
+        // Items and Blocks
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -88,6 +95,8 @@ public class MonsterHunterLikeMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
+            // Add an Entity
+            EntityRenderers.register(ModEntities.FOURLEGS.get(), FourlegsRenderer::new);
         }
 
         @SubscribeEvent

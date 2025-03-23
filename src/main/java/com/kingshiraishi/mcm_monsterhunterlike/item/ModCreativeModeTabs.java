@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                                 o.accept(ModBlocks.BLOCK__RED_ORB_BLOCK.get());
                                 o.accept(ModBlocks.BLOCK__BLUE_ORB_BLOCK.get());
                                 o.accept(ModBlocks.ENTITY_BLOCK__PEDESTAL.get());
+                                o.accept(ModItems.ITEM__SPAWN_EGG__FOURLEGS.get());
                             })
                             .build()
                     );

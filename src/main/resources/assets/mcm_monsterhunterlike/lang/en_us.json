@@ -15,5 +15,9 @@
     "block.mcm_monsterhunterlike.entity_block__pedestal": "Pedestal",
     "tooltip.kingshiraishi.entity_block__pedestal": "Place the Orb on top of this.",
 
+    "entity.mcm_monsterhunterlike.entity__fourlegs": "FOURLEGS",
+    "item.mcm_monsterhunterlike.item__spawn_egg__fourlegs": "FOURLEGS Spawn-egg",
+    "tooltip.kingshiraishi.item__spawn_egg__fourlegs": "The original monster.",
+
     "creativetab.mcm_monsterhunterlike.tab_name": "kingshiraishi's Mod Tab Name."
 }

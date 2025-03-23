@@ -1,11 +1,14 @@
 package com.kingshiraishi.mcm_monsterhunterlike.item;
 
 import com.kingshiraishi.mcm_monsterhunterlike.MonsterHunterLikeMod;
+import com.kingshiraishi.mcm_monsterhunterlike.entity.ModEntities;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -66,6 +69,15 @@ public class ModItems {
                     pTooltipComponents.add(Component.translatable(Screen.hasShiftDown()
                             ? "tooltip.kingshiraishi.item__blue_orb.shift_down"
                             : "tooltip.kingshiraishi.item__blue_orb"));
+                    super.appendHoverText(ps, pc, pTooltipComponents, f);
+                }});
+
+    public static final RegistryObject<Item> ITEM__SPAWN_EGG__FOURLEGS = MOD_ITEMS.register(
+            "item__spawn_egg__fourlegs", () -> new ForgeSpawnEggItem(
+                    ModEntities.FOURLEGS, 0x000000, 0xFFFFFF, new Item.Properties()) {
+                @Override
+                public void appendHoverText(ItemStack ps, TooltipContext pc, List<Component> pTooltipComponents, TooltipFlag f) {
+                    pTooltipComponents.add(Component.translatable("tooltip.kingshiraishi.item__spawn_egg__fourlegs"));
                     super.appendHoverText(ps, pc, pTooltipComponents, f);
                 }});
 
